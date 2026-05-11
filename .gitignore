@@ -1,0 +1,12 @@
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+outputs/models/*.joblib
+outputs/models/*.pt
+outputs/metrics/*.csv
+outputs/metrics/*.json
+outputs/submissions/*.csv
