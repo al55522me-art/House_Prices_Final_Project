@@ -6,3 +6,4 @@ jupyter>=1.0
 matplotlib>=3.8
 seaborn>=0.13
 torch>=2.7
+lightgbm>=4.5

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from lightgbm import LGBMRegressor
 from sklearn.ensemble import ExtraTreesRegressor, GradientBoostingRegressor, RandomForestRegressor
 from sklearn.linear_model import ElasticNet, Lasso, Ridge
 from sklearn.svm import SVR
@@ -39,5 +40,18 @@ def get_classic_models() -> dict[str, object]:
             max_depth=3,
             min_samples_leaf=3,
             random_state=RANDOM_STATE,
+        ),
+        "lightgbm": LGBMRegressor(
+            n_estimators=700,
+            learning_rate=0.025,
+            num_leaves=31,
+            max_depth=-1,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            reg_alpha=0.05,
+            reg_lambda=0.2,
+            random_state=RANDOM_STATE,
+            n_jobs=1,
+            verbose=-1,
         ),
     }

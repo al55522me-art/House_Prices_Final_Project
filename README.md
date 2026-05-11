@@ -62,6 +62,7 @@ python main.py --mode all
 - Random Forest
 - Extra Trees
 - Gradient Boosting
+- LightGBM
 
 ## Артефакты
 
